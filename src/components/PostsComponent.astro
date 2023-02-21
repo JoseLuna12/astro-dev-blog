@@ -30,7 +30,10 @@ const AllDisplay = {
 
 <Main content={{ title: "Posts", lang, urlSuffix: `posts/${filter}` }}>
   <Hero title="Devlog" slot="hero" />
-  <div class="flex justify-center space-x-4 py-3">
+  <div
+    slot="top-head"
+    class="flex my-5 py-5 px-3 justify-start sm:justify-start md:justify-center lg:justify-center space-x-1 sm:spacex-x-2 md:space-x-4 overflow-x-scroll"
+  >
     {
       blogTags.map((tag) => {
         const categoriesCss =
@@ -50,12 +53,12 @@ const AllDisplay = {
       })
     }
   </div>
-  <dir class="px-36">
+  <dir class="px-0 md:px-32 lg:px-36">
     {
       posts.map((p) => {
         const postData = p.data;
         return (
-          <div class="flex w-full">
+          <div class="flex flex-col sm:flex-row md:flex-row lg:flex-row w-full">
             <a href={`/dev/${p.slug}`} class="flex-1">
               <img
                 class="object-cover w-full"
