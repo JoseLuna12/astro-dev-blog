@@ -1,0 +1,55 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import MainLayout from "../layout/main.astro";
+import Hero from "./hero.svelte";
+import SmallPost from "./smallPost.svelte";
+import Button from "./Button.svelte";
+import type { SupportedLanguagesTypes } from "../utils/languageUtils";
+import { getPostsByLang, setFeaturedValues } from "../utils/postUtils";
+
+interface Props {
+  lang: SupportedLanguagesTypes;
+  more: string;
+}
+
+const { more, lang = "en" } = Astro.props;
+
+const rawPosts = await getCollection("blog");
+const posts = getPostsByLang(lang, rawPosts);
+
+let featuredRaw = posts.filter((p) => p.data.featured);
+let postEnhanced = setFeaturedValues(featuredRaw, posts);
+---
+
+<MainLayout content={{ title: "salud", lang }}>
+  <Hero title="Devlog" slot="hero" />
+
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-24"
+  >
+    {
+      postEnhanced.map((post) => {
+        const { data: p, slug } = post;
+        return (
+          <SmallPost
+            client:load
+            slug={slug}
+            title={p.title}
+            subtitle={p.description}
+            categories={p.categories}
+            thumbnail={p.thumbnail}
+            lang={lang}
+          />
+        );
+      })
+    }
+  </div>
+  <div>
+    <Button
+      client:load
+      linkPrefix={`/${lang}/posts/All`}
+      buttonText={more}
+      position="center"
+    />
+  </div>
+</MainLayout>

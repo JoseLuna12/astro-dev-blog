@@ -1,0 +1,92 @@
+---
+import { getCollection } from "astro:content";
+import Main from "../layout/main.astro";
+import type { SupportedLanguagesTypes } from "../utils/languageUtils";
+import { PostsTagsDefaults, getPostsByLang } from "../utils/postUtils";
+import Hero from "./hero.svelte";
+
+interface Props {
+  lang: SupportedLanguagesTypes;
+  currentCategory: string;
+}
+
+const { lang = "en", currentCategory: filter } = Astro.props;
+
+const blogTags = PostsTagsDefaults.map((p) => p.value);
+
+const rawPosts = await getCollection("blog");
+const posts = getPostsByLang(lang, rawPosts).filter((p) => {
+  if (filter == "All") {
+    return true;
+  }
+  return p.data.categories.includes(filter);
+});
+
+const AllDisplay = {
+  en: "All",
+  es: "Todos",
+};
+---
+
+<Main content={{ title: "Posts", lang, urlSuffix: `posts/${filter}` }}>
+  <Hero title="Devlog" slot="hero" />
+  <div class="flex justify-center space-x-4 py-3">
+    {
+      blogTags.map((tag) => {
+        const categoriesCss =
+          filter == tag
+            ? "border-black bg-black text-white"
+            : "border-black bg-white text-black";
+
+        return (
+          <a href={`/${lang}/posts/${tag}`}>
+            <div
+              class={`text-sm px-5 py-1 rounded-full border ${categoriesCss} hover:scale-105 transition ease-out duration-300`}
+            >
+              {tag == "All" ? AllDisplay[lang] : tag}
+            </div>
+          </a>
+        );
+      })
+    }
+  </div>
+  <dir class="px-36">
+    {
+      posts.map((p) => {
+        const postData = p.data;
+        return (
+          <div class="flex w-full">
+            <a href={`/dev/${p.slug}`} class="flex-1">
+              <img
+                class="object-cover w-full"
+                src={postData.thumbnail}
+                alt=""
+              />
+            </a>
+            <dir class="flex-1">
+              <div class="py-10 px-4">
+                <a href={`/dev/${p.slug}`} class="group">
+                  <h4 class="font-bold group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-500 transition ease-out duration-300">
+                    {postData.title}
+                  </h4>
+                  <p>{postData.description}</p>
+                </a>
+                <div class="flex space-x-1 py-5">
+                  {postData.categories.map((c) => {
+                    return (
+                      <a href={`/${lang}/posts/${c}`}>
+                        <div class="text-sm px-3 py-1 rounded-full bg-slate-400 text-white hover:scale-105 transition ease-out duration-300">
+                          {c}
+                        </div>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            </dir>
+          </div>
+        );
+      })
+    }
+  </dir>
+</Main>

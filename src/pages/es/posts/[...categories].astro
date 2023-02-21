@@ -1,0 +1,18 @@
+---
+import PostsComponent from "../../../components/PostsComponent.astro";
+import type { SupportedLanguagesTypes } from "../../../utils/languageUtils";
+import { PostsTagsDefaults } from "../../../utils/postUtils";
+const lang: SupportedLanguagesTypes = "es";
+
+export async function getStaticPaths() {
+  return PostsTagsDefaults.map((p) => {
+    return {
+      params: { categories: p.value },
+    };
+  });
+}
+
+const filter = Astro.params.categories ?? "All";
+---
+
+<PostsComponent currentCategory={filter} lang={lang} />

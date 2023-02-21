@@ -1,0 +1,46 @@
+---
+const { content } = Astro.props;
+import { supportedLanguages } from "../utils/languageUtils";
+---
+
+<html lang={content.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{content.title}</title>
+  </head>
+  <body>
+    <slot name="hero" />
+    <div class="w-full flex justify-center space-x-2 pt-10">
+      {
+        supportedLanguages.map((l, index) => {
+          return (
+            <>
+              <a
+                href={`/${l.key}/${content.urlSuffix ?? ""}`}
+                class:list={[{ "text-red-500": content.lang == l.key }]}
+              >
+                {l.value}
+              </a>
+              <span>
+                {index < supportedLanguages.length - 1 ? <span>|</span> : ""}
+              </span>
+            </>
+          );
+        })
+      }
+    </div>
+    <div class="px-10 pt-10">
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+  * {
+    font-family: "Poppins", sans-serif;
+  }
+</style>
