@@ -6,9 +6,25 @@ import { supportedLanguages } from "../utils/languageUtils";
 <html lang={content.lang}>
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/blog-icons/normal-page-ico-web.png"
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content="Dvelog" />
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content={Astro.url.pathname} />
+    <meta property="og:image" content="/blog-icons/bgimg-seo-home" />
+
+    <meta name="twitter:title" content="My Portfolio" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="/blog-icons/bgimg-seo-home" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="twitter:image:alt" content="My portfolio" />
+    <meta property="og:site_name" content="Dev log portfolio" />
     <title>{content.title}</title>
   </head>
   <body>

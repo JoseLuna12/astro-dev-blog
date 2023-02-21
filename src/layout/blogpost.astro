@@ -1,4 +1,6 @@
 ---
+import { PostsTagsDefaults } from "../utils/postUtils";
+
 type Props = {
   lang: string;
   title: string;
@@ -8,6 +10,7 @@ type Props = {
   blogId: string;
   thumbnail: string;
   languages: string[];
+  icon?: string;
 };
 
 const {
@@ -19,18 +22,24 @@ const {
   blogId,
   thumbnail,
   languages,
+  icon,
 } = Astro.props;
 
 let supportedLanguages: { [key: string]: string } = {
   en: "English",
   es: "Español",
 };
+
+const pageIcon = icon
+  ? PostsTagsDefaults.find((t) => t.value == icon)?.img ||
+    "/blog-icons/normal-page-ico-web.png"
+  : "/blog-icons/normal-page-ico-web.png";
 ---
 
 <html lang={lang}>
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href={pageIcon} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 

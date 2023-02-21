@@ -30,19 +30,19 @@ export function setFeaturedValues(featured: CollectionEntry<"blog">[] = [], post
 export const PostsTagsDefaults = [
     {
         value: "All",
-        img: ""
+        img: "/blog-icons/normal-page-ico-web.png"
     },
     {
         value: "Kotlin",
-        img: ""
+        img: "/blog-icons/android-kotlin-ico-web.png"
     },
     {
         value: "Swift",
-        img: ""
+        img: "/blog-icons/swift-ico-web.png"
     },
     {
         value: "Flutter",
-        img: ""
+        img: "/blog-icons/flutter-ico-web.png"
     }
 ] as const
 
