@@ -19,9 +19,14 @@ const posts = getPostsByLang(lang, rawPosts);
 
 let featuredRaw = posts.filter((p) => p.data.featured);
 let postEnhanced = setFeaturedValues(featuredRaw, posts);
+
+const pageTitle = {
+  en: "devlog",
+  es: "devlog",
+};
 ---
 
-<MainLayout content={{ title: "salud", lang }}>
+<MainLayout content={{ title: pageTitle[lang], lang }}>
   <Hero title="Devlog" slot="hero" />
 
   <div

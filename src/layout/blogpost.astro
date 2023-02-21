@@ -36,7 +36,7 @@ let supportedLanguages: { [key: string]: string } = {
 
     <meta property="og:title" content={title} />
     <meta property="og:type" content="blog" />
-    <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+    <meta property="og:url" content={Astro.url.pathname} />
     <meta property="og:image" content={thumbnail} />
 
     <meta name="twitter:title" content={title} />
@@ -50,21 +50,23 @@ let supportedLanguages: { [key: string]: string } = {
   </head>
   <body>
     {
-      <div class="w-full flex justify-center space-x-2 py-10">
+      (
+        <div class="w-full flex justify-center space-x-2 py-10">
           {languages.map((l, index) => {
             return (
               <div>
                 <a
-                href={`/dev/${l}/${blogId}`}
-                class:list={[{ "text-red-500": lang == l }]}
+                  href={`/dev/${l}/${blogId}`}
+                  class:list={[{ "text-red-500": lang == l }]}
                 >
-                {supportedLanguages[l]}
+                  {supportedLanguages[l]}
                 </a>
-                {index != languages.length -1 ? <span>|</span> : ""}
-                </div>
+                {index != languages.length - 1 ? <span>|</span> : ""}
+              </div>
             );
           })}
         </div>
+      )
     }
 
     <div class="px-5 md:px-0">
