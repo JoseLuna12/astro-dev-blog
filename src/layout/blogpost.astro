@@ -11,6 +11,7 @@ type Props = {
   thumbnail: string;
   languages: string[];
   icon?: string;
+  accent: string;
 };
 
 const {
@@ -23,6 +24,7 @@ const {
   thumbnail,
   languages,
   icon,
+  accent,
 } = Astro.props;
 
 let supportedLanguages: { [key: string]: string } = {
@@ -88,9 +90,11 @@ const pageIcon = icon
       {
         categories.map((c) => {
           return (
-            <div class="text-sm px-3 py-1 rounded-full bg-slate-400 text-white">
-              {c}
-            </div>
+            <a href={`/${lang}/posts/${c}`}>
+              <div class="text-sm px-3 py-1 rounded-full bg-slate-400 text-white">
+                {c}
+              </div>
+            </a>
           );
         })
       }
@@ -108,7 +112,7 @@ const pageIcon = icon
         class="pt-5 md:pt-10 lg:pt-20 px-0 md:px-10 lg:px-20 flex justify-center"
       >
         <article
-          class="prose md:prose-xl lg:prose-2xl prose-zinc prose-img:rounded-xl"
+          class={`prose w-full md:prose-xl lg:prose-2xl prose-zinc prose-img:rounded-xl prose-table:sm:table`}
         >
           <slot name="blog" />
         </article>
@@ -117,9 +121,28 @@ const pageIcon = icon
   </body>
 </html>
 
+<style is:global define:vars={{ accent }}>
+  .prose :where(a) {
+    color: var(--accent) !important;
+  }
+</style>
+
 <style is:global>
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
   * {
     font-family: "Poppins", sans-serif;
+  }
+  .img-carousel-blog {
+    display: flex;
+    justify-content: space-around;
+  }
+  .img-carousel-blog p {
+    flex: 1;
+  }
+  @media only screen and (max-width: 600px) {
+    .img-carousel-blog {
+      display: flex;
+      flex-direction: column;
+    }
   }
 </style>

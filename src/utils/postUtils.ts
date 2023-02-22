@@ -2,15 +2,15 @@ import type { CollectionEntry } from "astro:content"
 
 export function getPostsByLang(lang: string, list: CollectionEntry<"blog">[]) {
     return list.filter((post) => {
-        const slugLang = post.slug.split('/')
-        if (slugLang.length == 2) {
-            return slugLang[0] == lang
-        }
-        return false
+        const slugLang = post.data.currentLanguage
+        return lang == slugLang
     })
 }
 
 export function setFeaturedValues(featured: CollectionEntry<"blog">[] = [], postsValues: CollectionEntry<"blog">[], size = 3): CollectionEntry<"blog">[] {
+    if (postsValues.length <= 3) {
+        return postsValues
+    }
     if (featured.length < size) {
         const postV = postsValues.pop()
         if (postV == undefined) {
@@ -26,6 +26,16 @@ export function setFeaturedValues(featured: CollectionEntry<"blog">[] = [], post
         return featured
     }
 }
+
+export const AllowedPostTags = [
+    "All",
+    "Kotlin",
+    "Swift",
+    "Flutter",
+    "Astro",
+    "Web",
+    "Mobile"
+] as const
 
 export const PostsTagsDefaults = [
     {
@@ -43,7 +53,21 @@ export const PostsTagsDefaults = [
     {
         value: "Flutter",
         img: "/blog-icons/flutter-ico-web.png"
-    }
+    },
+    {
+        value: "Astro",
+        img: "/blog-icons/astro-icon-web.png"
+    },
+    {
+        value: "Web",
+        img: "/blog-icons/normal-page-ico-web.png"
+    },
+    {
+        value: "Mobile",
+        img: "/blog-icons/normal-page-ico-web.png"
+    },
+
 ] as const
 
+// export const PostTypesString = onlyKeys as const
 export type PostsTagsType = typeof PostsTagsDefaults[number]["value"]

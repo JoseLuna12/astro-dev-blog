@@ -1,16 +1,19 @@
 import { defineCollection, z } from 'astro:content';
+import { AllowedPostTags } from '../utils/postUtils';
 
 const blog = defineCollection({
     schema: z.object({
         featured: z.boolean().optional().default(false),
-        thumbnail: z.string(),
-        date: z.date().default(new Date()),
-        languages: z.array(z.string().default("en")),
-        currentLanguage: z.string().default("en"),
         image: z.string(),
+        thumbnail: z.string(),
         title: z.string(),
         description: z.string(),
-        categories: z.array(z.string())
+        accent: z.string().optional().default("#50A536"),
+        date: z.string(),
+        languages: z.array(z.string().default("en")),
+        currentLanguage: z.string().default("en"),
+        categories: z.array(z.enum(AllowedPostTags)),
+        relatedPosts: z.array(z.string()).optional()
     }),
 });
 

@@ -16,7 +16,6 @@ const { more, lang = "en" } = Astro.props;
 
 const rawPosts = await getCollection("blog");
 const posts = getPostsByLang(lang, rawPosts);
-
 let featuredRaw = posts.filter((p) => p.data.featured);
 let postEnhanced = setFeaturedValues(featuredRaw, posts);
 

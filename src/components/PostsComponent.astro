@@ -15,12 +15,16 @@ const { lang = "en", currentCategory: filter } = Astro.props;
 const blogTags = PostsTagsDefaults.map((p) => p.value);
 
 const rawPosts = await getCollection("blog");
-const posts = getPostsByLang(lang, rawPosts).filter((p) => {
-  if (filter == "All") {
-    return true;
-  }
-  return p.data.categories.includes(filter);
-});
+const posts = getPostsByLang(lang, rawPosts)
+  .filter((p) => {
+    if (filter == "All") {
+      return true;
+    }
+    return p.data.categories.includes(filter);
+  })
+  .sort((a, b) => {
+    return +new Date(a.data.date) - +new Date(b.data.date);
+  });
 
 const AllDisplay = {
   en: "All",

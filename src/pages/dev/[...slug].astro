@@ -31,11 +31,13 @@ const {
   thumbnail,
   currentLanguage,
   languages,
+  accent,
 } = data;
 const icon = categories[0] || "";
 ---
 
 <Blogpost
+  accent={accent}
   icon={icon}
   languages={languages}
   thumbnail={thumbnail}
