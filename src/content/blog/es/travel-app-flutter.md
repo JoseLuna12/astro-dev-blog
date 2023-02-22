@@ -3,7 +3,7 @@ image: "/blog-heros/travel-app-hero-flutter.png"
 thumbnail: "/blog-thumbnails/travel-app-thumb-flutter.png"
 title: "App de Viajes hecha en Flutter"
 description: "Una interfaz para una app de Viajes construida en Flutter"
-currentLanguage: "en"
+currentLanguage: "es"
 date: "22-02-2023"
 accent: "#46D1FD"
 languages: 
