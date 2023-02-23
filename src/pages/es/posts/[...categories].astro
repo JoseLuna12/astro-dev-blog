@@ -2,7 +2,7 @@
 import PostsComponent from "../../../components/PostsComponent.astro";
 import type { SupportedLanguagesTypes } from "../../../utils/languageUtils";
 import { AllowedPostTags, PostsTagsType } from "../../../utils/postUtils";
-const lang: SupportedLanguagesTypes = "en";
+const lang: SupportedLanguagesTypes = "es";
 
 export async function getStaticPaths() {
   return AllowedPostTags.map((p) => {
