@@ -34,10 +34,11 @@ export const AllowedPostTags = [
     "Flutter",
     "Astro",
     "Web",
-    "Mobile"
+    "Mobile",
+    "Rust"
 ] as const
 
-export const PostsTagsDefaults = [
+export const PostsTagsDefault: { value: PostsTagsType, img: string }[] = [
     {
         value: "All",
         img: "/blog-icons/normal-page-ico-web.png"
@@ -66,8 +67,12 @@ export const PostsTagsDefaults = [
         value: "Mobile",
         img: "/blog-icons/normal-page-ico-web.png"
     },
+    {
+        value: "Rust",
+        img: "/blog-icons/rust-icon-web.png"
+    }
 
-] as const
+]
 
 // export const PostTypesString = onlyKeys as const
-export type PostsTagsType = typeof PostsTagsDefaults[number]["value"]
+export type PostsTagsType = typeof AllowedPostTags[number]

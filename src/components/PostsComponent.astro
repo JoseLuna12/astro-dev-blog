@@ -2,17 +2,21 @@
 import { getCollection } from "astro:content";
 import Main from "../layout/main.astro";
 import type { SupportedLanguagesTypes } from "../utils/languageUtils";
-import { PostsTagsDefaults, getPostsByLang } from "../utils/postUtils";
+import {
+  AllowedPostTags,
+  getPostsByLang,
+  PostsTagsType,
+} from "../utils/postUtils";
 import Hero from "./hero.svelte";
 
 interface Props {
   lang: SupportedLanguagesTypes;
-  currentCategory: string;
+  currentCategory: PostsTagsType;
 }
 
 const { lang = "en", currentCategory: filter } = Astro.props;
 
-const blogTags = PostsTagsDefaults.map((p) => p.value);
+const blogTags = AllowedPostTags.map((p) => p);
 
 const rawPosts = await getCollection("blog");
 const posts = getPostsByLang(lang, rawPosts)

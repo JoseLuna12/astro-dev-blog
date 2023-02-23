@@ -1,5 +1,5 @@
 ---
-import { PostsTagsDefaults } from "../utils/postUtils";
+import { PostsTagsDefault } from "../utils/postUtils";
 
 type Props = {
   lang: string;
@@ -33,7 +33,7 @@ let supportedLanguages: { [key: string]: string } = {
 };
 
 const pageIcon = icon
-  ? PostsTagsDefaults.find((t) => t.value == icon)?.img ||
+  ? PostsTagsDefault.find((t) => t.value == icon)?.img ||
     "/blog-icons/normal-page-ico-web.png"
   : "/blog-icons/normal-page-ico-web.png";
 ---
@@ -137,6 +137,15 @@ const pageIcon = icon
     justify-content: space-around;
   }
   .img-carousel-blog p {
+    flex: 1;
+  }
+
+  .img-carousel-blog-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .img-carousel-blog-col p {
     flex: 1;
   }
   @media only screen and (max-width: 600px) {
