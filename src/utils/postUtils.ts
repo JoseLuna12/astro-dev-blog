@@ -35,7 +35,9 @@ export const AllowedPostTags = [
     "Astro",
     "Web",
     "Mobile",
-    "Rust"
+    "Rust",
+    "Gatsby",
+    "React"
 ] as const
 
 export const PostsTagsDefault: { value: PostsTagsType, img: string }[] = [
@@ -70,8 +72,15 @@ export const PostsTagsDefault: { value: PostsTagsType, img: string }[] = [
     {
         value: "Rust",
         img: "/blog-icons/rust-icon-web.png"
+    },
+    {
+        value: "Gatsby",
+        img: "/blog-icons/gatsby-icon.png"
+    },
+    {
+        value: "React",
+        img: "/blog-icons/normal-page-ico-web.png"
     }
-
 ]
 
 // export const PostTypesString = onlyKeys as const
