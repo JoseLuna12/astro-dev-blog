@@ -17,6 +17,8 @@ categories:
 ## Twitter Bot
 Este proyecto existe porque buscaba la forma de automatizar una lista de películas que me gustaría ver. Al principio utilizaba la app Shortcuts de apple para crear notas cuando compartía el link de una película, con el tiempo se me vino la idea de hacer esta lista publica y la mejor plataforma para hacerlo fue Twitter.
 
+Link del perfil [aquí](https://twitter.com/moonviesme) 👈
+
 Comencé con el desarrollo del backend, una aplicación de node y todos los endpoints que iba a utilizar esta app.
 
 **Stack:**<br>
