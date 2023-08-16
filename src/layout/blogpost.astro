@@ -5,27 +5,28 @@ type Props = {
   lang: string;
   title: string;
   subtitle: string;
-  hero: string;
   categories: string[];
   blogId: string;
-  thumbnail: string;
   languages: string[];
   icon?: string;
   accent: string;
+  images: string[];
+  thumbnails: string[];
 };
 
 const {
   title,
   lang,
-  hero,
   categories,
   subtitle,
   blogId,
-  thumbnail,
   languages,
   icon,
   accent,
+  images,
+  thumbnails
 } = Astro.props;
+
 
 let supportedLanguages: { [key: string]: string } = {
   en: "English",
@@ -48,11 +49,11 @@ const pageIcon = icon
     <meta property="og:title" content={title} />
     <meta property="og:type" content="blog" />
     <meta property="og:url" content={Astro.url.pathname} />
-    <meta property="og:image" content={thumbnail} />
+    <meta property="og:image" content={thumbnails[0]} />
 
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={subtitle} />
-    <meta name="twitter:image" content={thumbnail} />
+    <meta name="twitter:image" content={thumbnails[0]} />
     <meta name="twitter:card" content="summary_large_image" />
 
     <meta name="twitter:image:alt" content={title} />
@@ -60,9 +61,18 @@ const pageIcon = icon
     <title>{title}</title>
   </head>
   <body>
+    <div class="w-full py-10">
+      <a href={`/${lang}/posts/${categories[0] ?? "All"}`}>
+        <img
+          class="m-auto w-[20px] h-[20px] hover:scale-125 transition ease-in-out"
+          src="/home.png"
+          alt="home icon"
+        />
+      </a>
+    </div>
     {
       (
-        <div class="w-full flex justify-center space-x-2 py-10">
+        <div class="w-full flex justify-center space-x-2 py-5">
           {languages.map((l, index) => {
             return (
               <div>
@@ -101,18 +111,25 @@ const pageIcon = icon
     </div>
     <div class="w-full px-10 md:px-10 lg:px-20 flex flex-col pt-10">
       <div class="w-auto h-auto place-self-center">
-        <img
-          src={hero}
-          class="object-cover w-[90vw] sm:w-[90vw] md:w-[80vw] lg:w-[60vw] h-auto"
-          alt=""
-          draggable="false"
-        />
+        <picture>
+          {
+            images.map((i: string, index: number) => {
+              if(index == 0){
+                return <></>
+              }
+              return (
+                <source srcset={`${i} ${1200 / index}w`}  />
+              )
+            })
+          }
+          <img src={images[1]} alt={title} />
+        </picture>
       </div>
       <div
         class="pt-5 md:pt-10 lg:pt-20 px-0 md:px-10 lg:px-20 flex justify-center"
       >
         <article
-          class={`prose w-full md:prose-xl lg:prose-2xl prose-zinc prose-img:rounded-xl prose-table:sm:table`}
+          class={`prose w-full md:prose-xl lg:prose-xl prose-zinc prose-img:rounded-xl prose-table:sm:table`}
         >
           <slot name="blog" />
         </article>

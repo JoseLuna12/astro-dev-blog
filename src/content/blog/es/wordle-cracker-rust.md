@@ -1,6 +1,14 @@
 ---
-image: "/blog-heros/hero-rust-wordle.png"
-thumbnail: "/blog-thumbnails/wordle-rust-thumb.png"
+images:
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fhero-rust-wordle.png?alt=media&token=043b1cae-5af2-4d61-8d3e-afa65d7e7625"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_hero-rust-wordle.png?alt=media&token=6098d0f4-47a2-4cd6-bd92-ecd3ac124cf6"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_hero-rust-wordle.png?alt=media&token=99e12d83-c60e-4dcc-afe0-6fd514a415ec"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_hero-rust-wordle.png?alt=media&token=457cfda0-794f-4e22-ab63-b50b3f14f24c"
+thumbnails: 
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fwordle-rust-thumb.png?alt=media&token=5fab2aa9-c795-4a84-87ca-8525b444c30b"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle-rust-thumb.png?alt=media&token=e13654d3-e186-4a10-9747-ad9294ad2b57"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_wordle-rust-thumb.png?alt=media&token=2f5e358e-a200-45a5-bf72-f15870e4c1a4"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_wordle-rust-thumb.png?alt=media&token=68a8ab5c-7db3-45d6-89b3-da73e95228c5"
 title: "Wrodle cracker en Rust"
 description: "Una aplicación de consola escrita en Rust para adivinar la palabra del dia de Wordle."
 currentLanguage: "es"
@@ -57,19 +65,36 @@ cargo run en includes u,e
 ```
 
 
-<p align="center"><img src="/blog-resources/wordle1.png" width="550"></p>
+<p align="center">
+    <picture>
+        <source sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle1.png?alt=media&token=221b6e04-1cd6-4221-96c5-72f1bec40b9d 1200w,https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_wordle1.png?alt=media&token=469f19b3-2b01-4196-bcaa-cf8e28b681cd 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_wordle1.png?alt=media&token=de7181db-8d80-497e-91e5-5ad2aa725494 400w">
+        <img width="550" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fwordle1.png?alt=media&token=6a5620de-c805-457f-bf21-7156e510d429">
+    </picture>
+</p>
+
 
 ```
 cargo run en lastLetter e
 ```
 
-<p align="center"><img src="/blog-resources/wordle2.png" width="550"></p>
+<p align="center">
+    <picture>
+        <source sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle2.png?alt=media&token=977330ac-750f-47eb-9bb4-951da7ed75cd 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_wordle2.png?alt=media&token=97988ed5-7860-46f4-b308-5740721d9f6e 800w,  https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_wordle2.png?alt=media&token=46a2625b-eb50-4099-ba09-afc2e3687875 400w">
+        <img width="550" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle2.png?alt=media&token=977330ac-750f-47eb-9bb4-951da7ed75cd">
+    </picture>
+</p>
+
 
 ```
 cargo run en pattern __gue
 ```
 
-<p align="center"><img src="/blog-resources/wordle3-solved.png" width="550"></p>
+<p align="center">
+<picture>
+        <source sizes="(min-width: 720px) 720px, 100vw"  srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle3-solved.png?alt=media&token=bfeb02bb-6ee7-4e9e-9ec8-edc1111a0afc 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_wordle3-solved.png?alt=media&token=183baa7a-6bd5-41dd-82db-4ed360644030 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_wordle3-solved.png?alt=media&token=799935e4-b8e9-41f5-9792-51bf238282ba 400w">
+        <img width="550" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fwordle3-solved.png?alt=media&token=51abd4b7-da98-4450-ba9f-19276fc9f3df">
+    </picture>
+</p>
 </div>
 
 link to my [repo](https://github.com/JoseLuna12/wordle-cracker)

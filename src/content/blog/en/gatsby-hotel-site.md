@@ -1,6 +1,14 @@
 ---
-image: "/blog-heros/gatsby-tl-site-hero.png"
-thumbnail: "/blog-thumbnails/gatsby-tl-site-thumb.png"
+images:
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fgatsby-tl-site-hero.png?alt=media&token=8b6d4cc0-ec89-4b3e-9486-cf79af94fcc6"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_gatsby-tl-site-hero.png?alt=media&token=aee5afc8-6ec5-4e24-9a0d-72990d7831af"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_gatsby-tl-site-hero.png?alt=media&token=72f9ac78-a3eb-4a2a-91bd-e6b34f85e4b3"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_gatsby-tl-site-hero.png?alt=media&token=1a8e9d02-d99e-409d-88de-a2f2baaff7e3"
+thumbnails: 
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fgatsby-tl-site-thumb.png?alt=media&token=dffca831-e4ed-4c32-bb66-3c11cb512e05"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_gatsby-tl-site-thumb.png?alt=media&token=d7202331-a0d5-4ece-8975-1bc12fcf0ee8"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_gatsby-tl-site-thumb.png?alt=media&token=3166f1ce-69b3-43cf-87e2-83b92d5df9b5"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_gatsby-tl-site-thumb.png?alt=media&token=bfab745d-bcd2-4c3c-9cbd-c6925ff6f6a3"
 title: "Hotel site using Gatsby"
 description: "This hotel site was built on top of a custom CMS build by me."
 currentLanguage: "en"
@@ -13,6 +21,7 @@ languages:
 categories:
     - "Gatsby"
     - "React"
+    - "Web"
 ---
 
 ### Summary
@@ -60,6 +69,18 @@ Another weak point that this new version solves is the hosting, this new website
 ### Screenshots
 
 #### Web page
-![Terra Luna](/blog-resources/terra-luna-site-ss.png)
+
+<p align="center">
+<picture>
+<source sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_terra-luna-site-ss.png?alt=media&token=1be9d905-4b0c-4e19-9ee1-54155d1c8f22 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_terra-luna-site-ss.png?alt=media&token=e6b16a01-2c17-4d04-ab93-adc4a9227805 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_terra-luna-site-ss.png?alt=media&token=46db42bc-a1c9-431a-a3c2-31dbc3e87e54 400w">
+<img src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fterra-luna-site-ss.png?alt=media&token=29819313-a6f4-4100-bf0d-68bc54178e39">
+</picture>
+</p>
+
 #### Admin 
-![terra luna admin](/blog-resources/terra-luna-admin-ss.png)
+<p align="center">
+<picture>
+<source sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_terra-luna-admin-ss.png?alt=media&token=f55d7350-bf9a-4264-9911-17c2bfc08c74 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_terra-luna-admin-ss.png?alt=media&token=54df76b0-9d57-4a69-9e99-023f85707d3a 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_terra-luna-admin-ss.png?alt=media&token=14d3622c-8ac4-4248-8d49-b9bd678ec403 400w">
+<img src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fterra-luna-admin-ss.png?alt=media&token=3b5e648b-87b8-4207-96b2-a49f83b91297">
+</picture>
+</p>

@@ -1,6 +1,14 @@
 ---
-image: "/blog-heros/astro-hero-image-blog-post.png"
-thumbnail: "/blog-thumbnails/astro-thumbnail.png"
+images:
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fastro-hero-image-blog-post.png?alt=media&token=0de8744c-06a4-4edd-92dc-54c8c0af979c"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_astro-hero-image-blog-post.png?alt=media&token=cf14c1ba-c40f-4594-ae5a-8938c7bfb368"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_astro-hero-image-blog-post.png?alt=media&token=a9b19eb6-5f5a-447d-820a-668af18f32a8"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_astro-hero-image-blog-post.png?alt=media&token=32c4b46a-659a-4947-931e-0cb6ee397517"
+thumbnails: 
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fastro-thumbnail.png?alt=media&token=ea73215e-eda4-43b1-a399-5885c9634b59"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_astro-thumbnail.png?alt=media&token=2d85e5d2-31fe-4d3e-af39-719e40615366"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_astro-thumbnail.png?alt=media&token=344140fb-8774-4159-9033-0bbc0f7f314e"
+   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_astro-thumbnail.png?alt=media&token=82f81943-a9df-4c93-a4cc-ae5e1054f703"
 title: "Cómo construí este blog con Astro"
 description: "Astro es una buena herramienta y la mejor opción para construir un blog."
 currentLanguage: "es"

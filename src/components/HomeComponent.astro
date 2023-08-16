@@ -41,7 +41,7 @@ const pageTitle = {
             title={p.title}
             subtitle={p.description}
             categories={p.categories}
-            thumbnail={p.thumbnail}
+            thumbnails={p?.thumbnails ?? []}
             lang={lang}
           />
         );

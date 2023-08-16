@@ -26,12 +26,12 @@ const [_, blogId] = getDataFromSlug();
 const {
   categories,
   description,
-  image,
   title,
-  thumbnail,
   currentLanguage,
   languages,
   accent,
+  images,
+  thumbnails,
 } = data;
 const icon = categories[0] || "";
 ---
@@ -40,13 +40,13 @@ const icon = categories[0] || "";
   accent={accent}
   icon={icon}
   languages={languages}
-  thumbnail={thumbnail}
   categories={categories}
   blogId={blogId}
-  hero={image}
   lang={currentLanguage}
   subtitle={description}
   title={title}
+  images={images ?? []}
+  thumbnails={thumbnails ?? []}
 >
   <Content slot="blog" />
 </Blogpost>

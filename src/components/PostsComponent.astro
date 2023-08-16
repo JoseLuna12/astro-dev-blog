@@ -65,14 +65,27 @@ const AllDisplay = {
     {
       posts.map((p) => {
         const postData = p.data;
+        const thumbnails = postData.thumbnails ?? [];
+
+        const thumbnailsSrcSet = thumbnails
+          .map((t, index) => `${t} ${1200 - index * 100}w`)
+          .join(", ");
+
         return (
           <div class="flex flex-col sm:flex-row md:flex-row lg:flex-row w-full">
             <a href={`/dev/${p.slug}`} class="flex-1">
-              <img
-                class="object-cover w-full"
-                src={postData.thumbnail}
-                alt=""
-              />
+              <picture>
+                <source
+                  srcset={thumbnailsSrcSet}
+                  sizes="(min-width: 720px) 720px, 100vw"
+                />
+
+                <img
+                  class="object-cover w-full"
+                  src={thumbnails[0]}
+                  alt={postData.title}
+                />
+              </picture>
             </a>
             <dir class="flex-1">
               <div class="py-10 px-4">
