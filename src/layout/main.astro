@@ -1,16 +1,13 @@
 ---
 const { content } = Astro.props;
 import { supportedLanguages } from "../utils/languageUtils";
+import { PostsTagsDefault } from "../utils/postUtils";
 ---
 
 <html lang={content.lang}>
   <head>
     <meta charset="utf-8" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/blog-icons/normal-page-ico-web.png"
-    />
+    <link rel="icon" type="image/png" href={PostsTagsDefault[0].img} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta property="og:title" content="Dvelog" />

@@ -35,8 +35,8 @@ let supportedLanguages: { [key: string]: string } = {
 
 const pageIcon = icon
   ? PostsTagsDefault.find((t) => t.value == icon)?.img ||
-    "/blog-icons/normal-page-ico-web.png"
-  : "/blog-icons/normal-page-ico-web.png";
+  PostsTagsDefault[0].img
+  : PostsTagsDefault[0].img;
 ---
 
 <html lang={lang}>
