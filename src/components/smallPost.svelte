@@ -13,13 +13,7 @@
 
 <div class="w-full h-auto">
   <a href={`/dev/${slug}`} class="group">
-    <picture class="border-4 mb-3 object-cover max-h-[200px] w-full">
-      <source
-        srcset={thumbnailsSrcSet}
-        sizes="(min-width: 720px) 720px, 100vw"
-      />
-      <img src={thumbnails[0]} alt="" />
-    </picture>
+    <img srcset={thumbnailsSrcSet} src={thumbnails[0]} alt="" />
     <p>
       <span
         class="font-bold group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-pink-500 group-hover:to-violet-500 transition ease-out duration-300"

@@ -5,7 +5,7 @@ import type { SupportedLanguagesTypes } from "../utils/languageUtils";
 import {
   AllowedPostTags,
   getPostsByLang,
-  PostsTagsType,
+  type PostsTagsType,
 } from "../utils/postUtils";
 import Hero from "./hero.svelte";
 
@@ -62,6 +62,7 @@ const AllDisplay = {
     }
   </div>
   <dir class="px-0 md:px-32 lg:px-36">
+    <!-- <Image src={thumbnails[0]} srcset={thumbnailsSrcSet} alt="test"/> -->
     {
       posts.map((p) => {
         const postData = p.data;
@@ -74,18 +75,12 @@ const AllDisplay = {
         return (
           <div class="flex flex-col sm:flex-row md:flex-row lg:flex-row w-full">
             <a href={`/dev/${p.slug}`} class="flex-1">
-              <picture>
-                <source
+              <img
                   srcset={thumbnailsSrcSet}
-                  sizes="(min-width: 720px) 720px, 100vw"
-                />
-
-                <img
                   class="object-cover w-full"
                   src={thumbnails[0]}
                   alt={postData.title}
                 />
-              </picture>
             </a>
             <dir class="flex-1">
               <div class="py-10 px-4">

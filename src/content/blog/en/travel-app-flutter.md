@@ -27,20 +27,14 @@ categories:
 
 <div class="img-carousel-blog">
 <p align="center">
-<picture>
-<source sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fdesign-image.png?alt=media&token=67c7fc37-6d24-46b0-88bc-8d1457cf2123 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_design-image.png?alt=media&token=3bc968cf-a0bf-4378-abe7-713b5b42a4ee 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_design-image.png?alt=media&token=123d0f82-5cfa-4694-8f2b-284fbf8960c3 400w">
-<img width="500" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_design-image.png?alt=media&token=3de59351-2c5c-437d-a4aa-e36653677a1d">
-</picture>
+<img sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fdesign-image.png?alt=media&token=67c7fc37-6d24-46b0-88bc-8d1457cf2123 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_design-image.png?alt=media&token=3bc968cf-a0bf-4378-abe7-713b5b42a4ee 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_design-image.png?alt=media&token=123d0f82-5cfa-4694-8f2b-284fbf8960c3 400w" width="500" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_design-image.png?alt=media&token=3de59351-2c5c-437d-a4aa-e36653677a1d">
 </p>
 </div>
 
 ### Result
 <div class="img-carousel-blog">
 <p align="center">
-    <picture >
-    <source sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_travel-app-ss.png?alt=media&token=203c9b0b-f64f-4092-95da-f68bd350f72c 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_travel-app-ss.png?alt=media&token=a6011e78-29c3-445a-8a8d-2165ceacdce4 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_travel-app-ss.png?alt=media&token=c64e6776-2fb4-481d-b447-04261edf1e04 400w">
-    <img width="250" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Ftravel-app-ss.png?alt=media&token=f07446e3-7cf5-4828-93ec-d2b3c649c317">
-    </picture>
+    <img width="250"  sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_travel-app-ss.png?alt=media&token=203c9b0b-f64f-4092-95da-f68bd350f72c 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_travel-app-ss.png?alt=media&token=a6011e78-29c3-445a-8a8d-2165ceacdce4 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_travel-app-ss.png?alt=media&token=c64e6776-2fb4-481d-b447-04261edf1e04 400w" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Ftravel-app-ss.png?alt=media&token=f07446e3-7cf5-4828-93ec-d2b3c649c317">
 </p>
 </div>
 

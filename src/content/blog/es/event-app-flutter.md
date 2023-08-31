@@ -25,10 +25,7 @@ categories:
 
 ### Referencia de diseño
 <p align="center">
-<picture>
-<source sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_flutter-events-reference.png?alt=media&token=a1cf9fe0-ac8f-4240-94c1-6363a609886d 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_flutter-events-reference.png?alt=media&token=6a730a33-2b24-4581-88bf-3b674f820235 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_flutter-events-reference.png?alt=media&token=f4644220-790b-47cf-b819-bab34be7058f 400w">
-<img src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fflutter-events-reference.png?alt=media&token=cba4168b-bcb5-470c-9e9c-ce0c7490c610">
-</picture>
+<img sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_flutter-events-reference.png?alt=media&token=a1cf9fe0-ac8f-4240-94c1-6363a609886d 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_flutter-events-reference.png?alt=media&token=6a730a33-2b24-4581-88bf-3b674f820235 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_flutter-events-reference.png?alt=media&token=f4644220-790b-47cf-b819-bab34be7058f 400w" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fflutter-events-reference.png?alt=media&token=cba4168b-bcb5-470c-9e9c-ce0c7490c610">
 </p>
 
 ### Caracteristicas clave de la app
@@ -42,16 +39,10 @@ categories:
     <img src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fflutter-event-demo.gif?alt=media&token=c4afd336-6dc8-407e-9b59-e7b6e569d22e">
 </p>
 <p align="center">
-<picture width="250">
-<source sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_event-app-homeScreen.png?alt=media&token=24ae9ded-f6c5-47c2-92e9-f2f2a3ba2ccc 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_event-app-homeScreen.png?alt=media&token=2893b8ce-6d00-435a-96e0-cb9c337129af 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_event-app-homeScreen.png?alt=media&token=efdb343a-b8cc-43e3-bad1-046be6492d3d 400w">
-<img src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fevent-app-homeScreen.png?alt=media&token=e0e7641b-0862-4d33-98a7-07f2ad485827">
-</picture>
+<img width="250" sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_event-app-homeScreen.png?alt=media&token=24ae9ded-f6c5-47c2-92e9-f2f2a3ba2ccc 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_event-app-homeScreen.png?alt=media&token=2893b8ce-6d00-435a-96e0-cb9c337129af 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_event-app-homeScreen.png?alt=media&token=efdb343a-b8cc-43e3-bad1-046be6492d3d 400w" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fevent-app-homeScreen.png?alt=media&token=e0e7641b-0862-4d33-98a7-07f2ad485827">
 </p>
 <p align="center">
-<picture width="250">
-<source sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_event-app-eventscreen.png?alt=media&token=4c31ee03-46a8-4636-bb5b-7e2a081d853a 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_event-app-eventscreen.png?alt=media&token=3a98aebe-090a-49a7-9ce3-2c4d19060514 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_event-app-eventscreen.png?alt=media&token=5d87638d-5f94-40c9-95bb-97d5f8e24d9f 400w">
-<img src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fevent-app-eventscreen.png?alt=media&token=2fb371e7-ce83-4894-a478-390d7927c34c">
-</picture>
+<img width="250" sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_event-app-eventscreen.png?alt=media&token=4c31ee03-46a8-4636-bb5b-7e2a081d853a 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_event-app-eventscreen.png?alt=media&token=3a98aebe-090a-49a7-9ce3-2c4d19060514 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_event-app-eventscreen.png?alt=media&token=5d87638d-5f94-40c9-95bb-97d5f8e24d9f 400w" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fevent-app-eventscreen.png?alt=media&token=2fb371e7-ce83-4894-a478-390d7927c34c">
 </p>
 </div>
 
