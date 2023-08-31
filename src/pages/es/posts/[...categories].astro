@@ -1,7 +1,7 @@
 ---
 import PostsComponent from "../../../components/PostsComponent.astro";
 import type { SupportedLanguagesTypes } from "../../../utils/languageUtils";
-import { AllowedPostTags, PostsTagsType } from "../../../utils/postUtils";
+import { AllowedPostTags, type PostsTagsType } from "../../../utils/postUtils";
 const lang: SupportedLanguagesTypes = "es";
 
 export async function getStaticPaths() {

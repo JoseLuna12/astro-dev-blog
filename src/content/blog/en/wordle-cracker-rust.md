@@ -65,10 +65,7 @@ cargo run en includes u,e
 
 
 <p align="center">
-    <picture>
-        <source sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle1.png?alt=media&token=221b6e04-1cd6-4221-96c5-72f1bec40b9d 1200w,https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_wordle1.png?alt=media&token=469f19b3-2b01-4196-bcaa-cf8e28b681cd 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_wordle1.png?alt=media&token=de7181db-8d80-497e-91e5-5ad2aa725494 400w">
-        <img width="550" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fwordle1.png?alt=media&token=6a5620de-c805-457f-bf21-7156e510d429">
-    </picture>
+    <img width="550" sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle1.png?alt=media&token=221b6e04-1cd6-4221-96c5-72f1bec40b9d 1200w,https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_wordle1.png?alt=media&token=469f19b3-2b01-4196-bcaa-cf8e28b681cd 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_wordle1.png?alt=media&token=de7181db-8d80-497e-91e5-5ad2aa725494 400w" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fwordle1.png?alt=media&token=6a5620de-c805-457f-bf21-7156e510d429">
 </p>
 
 ```
@@ -76,10 +73,7 @@ cargo run en lastLetter e
 ```
 
 <p align="center">
-    <picture>
-        <source sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle2.png?alt=media&token=977330ac-750f-47eb-9bb4-951da7ed75cd 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_wordle2.png?alt=media&token=97988ed5-7860-46f4-b308-5740721d9f6e 800w,  https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_wordle2.png?alt=media&token=46a2625b-eb50-4099-ba09-afc2e3687875 400w">
-        <img width="550" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle2.png?alt=media&token=977330ac-750f-47eb-9bb4-951da7ed75cd">
-    </picture>
+    <img width="550" sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle2.png?alt=media&token=977330ac-750f-47eb-9bb4-951da7ed75cd 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_wordle2.png?alt=media&token=97988ed5-7860-46f4-b308-5740721d9f6e 800w,  https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_wordle2.png?alt=media&token=46a2625b-eb50-4099-ba09-afc2e3687875 400w" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle2.png?alt=media&token=977330ac-750f-47eb-9bb4-951da7ed75cd">
 </p>
 
 ```
@@ -87,10 +81,7 @@ cargo run en pattern __gue
 ```
 
 <p align="center">
-<picture>
-        <source sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle3-solved.png?alt=media&token=bfeb02bb-6ee7-4e9e-9ec8-edc1111a0afc 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_wordle3-solved.png?alt=media&token=183baa7a-6bd5-41dd-82db-4ed360644030 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_wordle3-solved.png?alt=media&token=799935e4-b8e9-41f5-9792-51bf238282ba 400w">
-        <img width="550" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fwordle3-solved.png?alt=media&token=51abd4b7-da98-4450-ba9f-19276fc9f3df">
-    </picture>
+<img width="550" sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle3-solved.png?alt=media&token=bfeb02bb-6ee7-4e9e-9ec8-edc1111a0afc 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_wordle3-solved.png?alt=media&token=183baa7a-6bd5-41dd-82db-4ed360644030 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_wordle3-solved.png?alt=media&token=799935e4-b8e9-41f5-9792-51bf238282ba 400w" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fwordle3-solved.png?alt=media&token=51abd4b7-da98-4450-ba9f-19276fc9f3df">
 </p>
 </div>
 
