@@ -113,12 +113,51 @@ export function getBlogIdFromSlug(slug: string) {
   return slug.split("/")[1] ?? "";
 }
 
+type ResponsiveSource = {
+  url: string;
+  width: number;
+};
+
+const THUMBNAIL_WIDTH_BY_HINT: Record<string, number> = {
+  thumbnail_low: 400,
+  thumbnail_med: 800,
+  thumbnail_half: 1200,
+};
+
+function inferImageWidth(url: string, index: number, total: number) {
+  const matchedHint = Object.entries(THUMBNAIL_WIDTH_BY_HINT).find(([hint]) =>
+    url.includes(hint)
+  );
+  if (matchedHint) {
+    return matchedHint[1];
+  }
+
+  // Fallback for URLs without width hint tokens.
+  const fallbackWidths = [1600, 1200, 800, 400];
+  const normalizedIndex = Math.min(index, fallbackWidths.length - 1);
+  if (total <= fallbackWidths.length) {
+    return fallbackWidths[normalizedIndex];
+  }
+  return fallbackWidths[fallbackWidths.length - 1];
+}
+
+export function buildResponsiveSources(images: string[] = []): ResponsiveSource[] {
+  const uniqueImages = [...new Set(images.filter(Boolean))];
+  return uniqueImages
+    .map((url, index) => ({
+      url,
+      width: inferImageWidth(url, index, uniqueImages.length),
+    }))
+    .sort((left, right) => left.width - right.width);
+}
+
+export function getResponsiveImage(images: string[] = []) {
+  const sources = buildResponsiveSources(images);
+  const srcset = sources.map((source) => `${source.url} ${source.width}w`).join(", ");
+  const src = sources[sources.length - 1]?.url ?? "";
+  return { src, srcset };
+}
+
 export function buildResponsiveSrcSet(images: string[] = []) {
-  const widths = [1200, 900, 600, 400];
-  return images
-    .map((image, index) => {
-      const width = widths[index] ?? widths[widths.length - 1];
-      return `${image} ${width}w`;
-    })
-    .join(", ");
+  return getResponsiveImage(images).srcset;
 }

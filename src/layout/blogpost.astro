@@ -3,7 +3,7 @@ import { getLanguageLabel } from "../utils/languageUtils";
 import {
   buildCategoryPath,
   buildLocalizedPostPath,
-  buildResponsiveSrcSet,
+  getResponsiveImage,
   PostsTagsDefault,
 } from "../utils/postUtils";
 import { getLocale, siteConfig, toAbsoluteUrl } from "../utils/site";
@@ -37,8 +37,9 @@ const {
 const pageIcon = icon
   ? PostsTagsDefault.find((tag) => tag.value === icon)?.img ?? PostsTagsDefault[0].img
   : PostsTagsDefault[0].img;
-const socialImage = thumbnails[0] ?? images[0] ?? siteConfig.defaultSocialImage;
-const imageSrcSet = buildResponsiveSrcSet(images);
+const { src: socialImage } = getResponsiveImage([...thumbnails, ...images]);
+const { src: blogImageSrc, srcset: imageSrcSet } = getResponsiveImage(images);
+const safeSocialImage = socialImage || siteConfig.defaultSocialImage;
 const baseUrl = Astro.site?.toString() ?? siteConfig.siteUrl;
 const canonicalUrl = toAbsoluteUrl(buildLocalizedPostPath(lang, blogId), baseUrl);
 const uniqueLanguages = [...new Set(languages)] as ("en" | "es")[];
@@ -70,12 +71,12 @@ const uniqueLanguages = [...new Set(languages)] as ("en" | "es")[];
     <meta property="og:description" content={subtitle} />
     <meta property="og:type" content="article" />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:image" content={socialImage} />
+    <meta property="og:image" content={safeSocialImage} />
     <meta property="og:site_name" content={siteConfig.siteName} />
     <meta property="og:locale" content={getLocale(lang)} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={subtitle} />
-    <meta name="twitter:image" content={socialImage} />
+    <meta name="twitter:image" content={safeSocialImage} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image:alt" content={title} />
     <title>{title}</title>
@@ -127,12 +128,12 @@ const uniqueLanguages = [...new Set(languages)] as ("en" | "es")[];
     </div>
     <div class="flex w-full flex-col px-10 pt-10 md:px-10 lg:px-20">
       {
-        images.length > 0 && (
+        blogImageSrc && (
           <div class="h-auto w-auto place-self-center">
             <img
               class="max-h-[520px] rounded-xl object-cover"
               sizes="(min-width: 1024px) 960px, 100vw"
-              src={images[0]}
+              src={blogImageSrc}
               srcset={imageSrcSet || undefined}
               alt={title}
             />
