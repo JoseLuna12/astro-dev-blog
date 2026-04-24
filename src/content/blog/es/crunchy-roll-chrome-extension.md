@@ -10,9 +10,9 @@ thumbnails:
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_crunchyroll-thumb.png?alt=media&token=4e7d5bd8-4f5b-48d0-9ca1-d984df738928"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_crunchyroll-thumb.png?alt=media&token=f431e07e-29de-46f3-9d4b-259f4824cd25"
 title: "Extensión para Crunchyroll.com"
-description: "Esta extensión para crunchyroll previene spoilers y asi disfrutar mas la experiencia en la plataforma."
+description: "Una extension para Crunchyroll que previene spoilers y mejora la experiencia de uso."
 currentLanguage: "es"
-date: "04-06-2023"
+date: "2023-06-04"
 accent: "#F37422"
 languages: 
     - "en"
@@ -96,7 +96,6 @@ Antes:
 </div>
 
 Repositorio [aquí](https://github.com/JoseLuna12/crunchyroll-chrome-extension/) 👈 <br>
-
 
 
 

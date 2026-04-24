@@ -10,9 +10,9 @@ thumbnails:
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_travel-app-thumb-flutter.png?alt=media&token=e18196da-7a1b-4d41-9ab8-2c558c45db29"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_travel-app-thumb-flutter.png?alt=media&token=3337e553-bbd3-4893-9d28-fe51df23a6bc"
 title: "A Travel App UI with Flutter"
-description: "A simple interface for a Travel app built with Flutter."
+description: "A lightweight travel app interface built with Flutter."
 currentLanguage: "en"
-date: "22-02-2023"
+date: "2023-02-22"
 accent: "#46D1FD"
 languages: 
     - "es"

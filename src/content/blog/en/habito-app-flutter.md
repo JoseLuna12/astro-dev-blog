@@ -9,10 +9,10 @@ thumbnails:
   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_flutter-habito-thumb.png?alt=media&token=9b526a40-4568-475c-a8d6-5a8e74f87cc0"
   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_flutter-habito-thumb.png?alt=media&token=844eb441-c73a-44d0-9f84-e11b527d0595"
   - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_flutter-habito-thumb.png?alt=media&token=6b752b12-44ae-4444-9e5b-73db5ac38df1"
-title: "Task App built with Flutter"
-description: "A functional app to create habits by completing daily tasks"
+title: "Habit Tracker App built with Flutter"
+description: "A functional habit tracker built around completing daily tasks."
 currentLanguage: "en"
-date: "01-08-2023"
+date: "2023-08-01"
 accent: "#FCA311"
 languages:
   - "es"

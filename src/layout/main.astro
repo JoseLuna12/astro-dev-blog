@@ -1,60 +1,115 @@
 ---
-const { content } = Astro.props;
 import { supportedLanguages } from "../utils/languageUtils";
-import { PostsTagsDefault } from "../utils/postUtils";
+import { getLocale, siteConfig, toAbsoluteUrl } from "../utils/site";
+
+type Props = {
+  title: string;
+  description: string;
+  lang: string;
+  urlSuffix?: string;
+  socialImage?: string;
+};
+
+const {
+  title,
+  description,
+  lang,
+  urlSuffix = "",
+  socialImage = siteConfig.defaultSocialImage,
+} = Astro.props;
+
+const normalizedSuffix = urlSuffix.replace(/^\/+|\/+$/g, "");
+const pathname = normalizedSuffix ? `/${lang}/${normalizedSuffix}` : `/${lang}`;
+const baseUrl = Astro.site?.toString() ?? siteConfig.siteUrl;
+const canonicalUrl = toAbsoluteUrl(pathname, baseUrl);
 ---
 
-<html lang={content.lang}>
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href={PostsTagsDefault[0].img} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta property="og:title" content="Dvelog" />
-    <meta property="og:type" content="blog" />
-    <meta property="og:url" content={Astro.url.pathname} />
-    <meta property="og:image" content="/blog-icons/bgimg-seo-home.png" />
-
-    <meta name="twitter:title" content="My Portfolio" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="/blog-icons/bgimg-seo-home.png" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    {
+      supportedLanguages.map((language) => {
+        const alternatePath = normalizedSuffix
+          ? `/${language.key}/${normalizedSuffix}`
+          : `/${language.key}`;
+        return (
+          <link
+            rel="alternate"
+            hreflang={language.key}
+            href={toAbsoluteUrl(alternatePath, baseUrl)}
+          />
+        );
+      })
+    }
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={toAbsoluteUrl(
+        normalizedSuffix ? `/en/${normalizedSuffix}` : "/en",
+        baseUrl
+      )}
+    />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:site_name" content={siteConfig.siteName} />
+    <meta property="og:locale" content={getLocale(lang)} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
     <meta name="twitter:card" content="summary_large_image" />
-
-    <meta name="twitter:image:alt" content="My portfolio" />
-    <meta property="og:site_name" content="Dev log portfolio" />
-    <title>{content.title}</title>
+    <meta name="twitter:image:alt" content={title} />
+    <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-white text-zinc-950">
     <slot name="hero" />
     <div class="w-full flex justify-center space-x-2 pt-10">
       {
-        supportedLanguages.map((l, index) => {
+        supportedLanguages.map((language, index) => {
+          const href = normalizedSuffix
+            ? `/${language.key}/${normalizedSuffix}`
+            : `/${language.key}`;
+
           return (
             <>
               <a
-                href={`/${l.key}/${content.urlSuffix ?? ""}`}
-                class:list={[{ "text-red-500": content.lang == l.key }]}
+                href={href}
+                class:list={[{ "text-red-500": lang === language.key }]}
               >
-                {l.value}
+                {language.value}
               </a>
-              <span>
-                {index < supportedLanguages.length - 1 ? <span>|</span> : ""}
-              </span>
+              <span>{index < supportedLanguages.length - 1 ? <span>|</span> : ""}</span>
             </>
           );
         })
       }
     </div>
     <slot name="top-head" />
-    <div class="px-3 sm:px-5 md:px-10 lg:px-10 pt-10">
+    <main class="px-3 pt-10 sm:px-5 md:px-10 lg:px-10">
       <slot />
-    </div>
+    </main>
   </body>
 </html>
 
 <style is:global>
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
   * {
     font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
   }
 </style>

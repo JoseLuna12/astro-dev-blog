@@ -9,10 +9,10 @@ thumbnails:
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_color-palette-rust-thumb.png?alt=media&token=693a376a-7dfb-4f31-9640-72a3d3004f12"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_color-palette-rust-thumb.png?alt=media&token=0557f762-6203-4437-bb8f-3a6e52243000"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_color-palette-rust-thumb.png?alt=media&token=50261796-e930-4b12-bd4a-9d3b68e49ed7"
-title: "Una librería WASM construida en Rust"
-description: "Esta librería recibe una imagen y retorna la misma imagen con su paleta de colores."
+title: "Una libreria WASM construida en Rust"
+description: "Una libreria en Rust y WASM que extrae la paleta de una imagen y devuelve una vista previa de color."
 currentLanguage: "es"
-date: "03-03-2023"
+date: "2023-03-03"
 accent: "#000000"
 languages: 
     - "en"
@@ -102,7 +102,6 @@ Puede consultar el script de la biblioteca [aquí](https://github.com/JoseLuna12
 <img sizes="(min-width: 720px) 720px, 100vw" srcset="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_grand-palette.jpg?alt=media&token=3754821e-f9e7-4a5d-9dc5-2aa170f2f0de 1200w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_grand-palette.jpg?alt=media&token=27373741-0597-4bde-bafb-c73fa54cba3a 800w, https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_grand-palette.jpg?alt=media&token=1f91509e-fdc2-4a3e-8519-de6bf355bbb4 400w" src="https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fgrand-palette.jpg?alt=media&token=775071ca-b535-4ae4-831b-9a695f404ed1">
 </p>
 </div>
-
 
 
 

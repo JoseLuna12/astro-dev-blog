@@ -9,10 +9,10 @@ thumbnails:
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle-rust-thumb.png?alt=media&token=e13654d3-e186-4a10-9747-ad9294ad2b57"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_wordle-rust-thumb.png?alt=media&token=2f5e358e-a200-45a5-bf72-f15870e4c1a4"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_wordle-rust-thumb.png?alt=media&token=68a8ab5c-7db3-45d6-89b3-da73e95228c5"
-title: "Wordle cracker in Rust"
+title: "Wordle Cracker in Rust"
 description: "A Rust console application to guess the current Wordle word."
 currentLanguage: "en"
-date: "23-02-2023"
+date: "2023-02-23"
 accent: "#000000"
 languages: 
     - "en"

@@ -10,9 +10,9 @@ thumbnails:
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_react-thumbnail.png?alt=media&token=f82cf0c0-8526-4e23-9b55-443f8092687f"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_react-thumbnail.png?alt=media&token=b1d5db2b-d285-4831-8ee2-7e09899dea5b"
 title: "Web App de peliculas para Twitter"
-description: "Esta Web App genera tweets con solo proporcionar el nombre de una pelicula y las postea."
+description: "Una web app que genera tweets sobre peliculas a partir de un solo titulo."
 currentLanguage: "es"
-date: "10-09-2022"
+date: "2022-09-10"
 accent: "#387CA0"
 languages: 
     - "es"
