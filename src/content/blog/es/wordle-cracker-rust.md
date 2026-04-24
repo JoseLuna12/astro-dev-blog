@@ -9,10 +9,10 @@ thumbnails:
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_wordle-rust-thumb.png?alt=media&token=e13654d3-e186-4a10-9747-ad9294ad2b57"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_wordle-rust-thumb.png?alt=media&token=2f5e358e-a200-45a5-bf72-f15870e4c1a4"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_wordle-rust-thumb.png?alt=media&token=68a8ab5c-7db3-45d6-89b3-da73e95228c5"
-title: "Wrodle cracker en Rust"
-description: "Una aplicación de consola escrita en Rust para adivinar la palabra del dia de Wordle."
+title: "Wordle Cracker en Rust"
+description: "Una aplicacion de consola escrita en Rust para adivinar la palabra del dia en Wordle."
 currentLanguage: "es"
-date: "23-02-2023"
+date: "2023-02-23"
 accent: "#000000"
 languages: 
     - "en"
@@ -26,21 +26,21 @@ categories:
 Con esta retroalimentación la aplicación es capaz de dar palabras que cumplan con esas restricciones.
 
 ### Comandos
-La aplicación trabaja con seis simples comandos.
-- *firstLetter*: recive una letra y retorna todas las palabras que terminan con ella.
-- *lastLetter*: recive una letra y retorna todas las palabras que terminan con ella.
-- *contains*: recive multiples letras y retorna todas las palabras que las contienen.
-- *incorrectWords*: recive multiples letras y filtra todas las palabras que las contienen.
-- *pattern*: recive un patrón como `h _ _ s e` y retorna todas las palabras que coinciden con la posición de las letras.
-- *staticLetters*: recive un grupo de letras y retorna todas las palabras que las contiene sin inportar la posición.
+La aplicación trabaja con seis comandos simples.
+- *firstLetter*: recibe una letra y retorna todas las palabras que empiezan con ella.
+- *lastLetter*: recibe una letra y retorna todas las palabras que terminan con ella.
+- *contains*: recibe multiples letras y retorna todas las palabras que las contienen.
+- *incorrectWords*: recibe multiples letras y filtra todas las palabras que contienen esas letras.
+- *pattern*: recibe un patron como `h _ _ s e` y retorna todas las palabras que coinciden con la posicion de las letras.
+- *staticLetters*: recibe un grupo de letras y retorna todas las palabras que las contienen sin importar la posicion.
 #### Comandos utilitarios
-No todos los comandos ayudan solo con filtrar las palabras, hay algunos comandos que sirven para el sistema mismo.
-- *save*: Guarda localmente todas las palabras que se extrae de internet en un archivo local.
-- *read*: Lee todas las palabras guardadas localmente y las imprime en la consola.
-Esta aplicación también soporta palabras en español, el primer parametro en el comando puede ser `en` o `es` para escoger un lenguaje
+No todos los comandos sirven solo para filtrar palabras; algunos tambien ayudan al sistema.
+- *save*: guarda localmente todas las palabras extraidas de internet en un archivo local.
+- *read*: lee todas las palabras guardadas localmente y las imprime en la consola.
+Esta aplicación tambien soporta palabras en español. El primer parametro del comando puede ser `en` o `es` para escoger un lenguaje.
 
 ### Cómo se obtienen las palabras
-Las palabras se obtienen usando la tecnologia de `web scrapping` donde se escanea una pagina web y se extrae sus datos programaticamente.
+Las palabras se obtienen usando `web scraping`, donde se escanea una pagina web y se extraen sus datos programaticamente.
 ```rust
 fn get_query_object<'l>(lang: &'l Langs) -> QueryObject {
     match lang {
@@ -55,7 +55,7 @@ fn get_query_object<'l>(lang: &'l Langs) -> QueryObject {
     }
 }
 ```
-En este ejemplo se crea un struct dependiendo del lenguaje, con esto la función que extrae los datos sabe donde y cual selector usar.
+En este ejemplo se crea un struct dependiendo del lenguaje. Con eso, la funcion que extrae los datos sabe que URL y que selector usar.
 
 ## Ejemplo
 <div class="img-carousel-blog-col">

@@ -5,7 +5,8 @@ import Hero from "./hero.svelte";
 import SmallPost from "./smallPost.svelte";
 import Button from "./Button.svelte";
 import type { SupportedLanguagesTypes } from "../utils/languageUtils";
-import { getPostsByLang, setFeaturedValues } from "../utils/postUtils";
+import { getFeaturedPosts, getPostsByLang } from "../utils/postUtils";
+import { siteConfig } from "../utils/site";
 
 interface Props {
   lang: SupportedLanguagesTypes;
@@ -16,32 +17,39 @@ const { more, lang = "en" } = Astro.props;
 
 const rawPosts = await getCollection("blog");
 const posts = getPostsByLang(lang, rawPosts);
-let featuredRaw = posts.filter((p) => p.data.featured);
-let postEnhanced = setFeaturedValues(featuredRaw, posts);
+const featuredPosts = getFeaturedPosts(posts);
 
-const pageTitle = {
-  en: "devlog",
-  es: "devlog",
+const pageContent = {
+  en: {
+    title: "Devlog",
+    description: siteConfig.defaultDescriptions.en,
+  },
+  es: {
+    title: "Devlog",
+    description: siteConfig.defaultDescriptions.es,
+  },
 };
 ---
 
-<MainLayout content={{ title: pageTitle[lang], lang }}>
-  <Hero title="Devlog" slot="hero" />
+<MainLayout
+  title={pageContent[lang].title}
+  description={pageContent[lang].description}
+  lang={lang}
+  socialImage={siteConfig.defaultSocialImage}
+>
+  <Hero title={siteConfig.heroTitle} homeHref={`/${lang}`} slot="hero" />
 
-  <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-24"
-  >
+  <div class="grid grid-cols-1 gap-24 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
     {
-      postEnhanced.map((post) => {
-        const { data: p, slug } = post;
+      featuredPosts.map((post) => {
+        const { data, slug } = post;
         return (
           <SmallPost
-            client:load
             slug={slug}
-            title={p.title}
-            subtitle={p.description}
-            categories={p.categories}
-            thumbnails={p?.thumbnails ?? []}
+            title={data.title}
+            subtitle={data.description}
+            categories={data.categories}
+            thumbnails={data.thumbnails ?? []}
             lang={lang}
           />
         );
@@ -49,11 +57,6 @@ const pageTitle = {
     }
   </div>
   <div>
-    <Button
-      client:load
-      linkPrefix={`/${lang}/posts/All`}
-      buttonText={more}
-      position="center"
-    />
+    <Button href={`/${lang}/posts/All`} buttonText={more} position="center" />
   </div>
 </MainLayout>

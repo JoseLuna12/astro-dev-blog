@@ -1,34 +1,8 @@
 import type { CollectionEntry } from "astro:content";
+import type { SupportedLanguagesTypes } from "./languageUtils";
 
 export function getPostsByLang(lang: string, list: CollectionEntry<"blog">[]) {
-  return list.filter((post) => {
-    const slugLang = post.data.currentLanguage;
-    return lang == slugLang;
-  });
-}
-
-export function setFeaturedValues(
-  featured: CollectionEntry<"blog">[] = [],
-  postsValues: CollectionEntry<"blog">[],
-  size = 3
-): CollectionEntry<"blog">[] {
-  if (postsValues.length <= 3) {
-    return postsValues;
-  }
-  if (featured.length < size) {
-    const postV = postsValues.pop();
-    if (postV == undefined) {
-      return postsValues;
-    }
-    const alreadyInFeature = featured.find((f) => f.slug == postV?.slug);
-
-    if (!alreadyInFeature) {
-      featured.push(postV);
-    }
-    return setFeaturedValues(featured, postsValues);
-  } else {
-    return featured;
-  }
+  return list.filter((post) => lang === post.data.currentLanguage);
 }
 
 export const AllowedPostTags = [
@@ -94,3 +68,57 @@ export const PostsTagsDefault: { value: PostsTagsType; img: string }[] = [
 
 // export const PostTypesString = onlyKeys as const
 export type PostsTagsType = (typeof AllowedPostTags)[number];
+
+export function isPostTag(value: string): value is PostsTagsType {
+  return AllowedPostTags.includes(value as PostsTagsType);
+}
+
+export function sortPostsByDateDesc(posts: CollectionEntry<"blog">[]) {
+  return [...posts].sort(
+    (left, right) => right.data.date.getTime() - left.data.date.getTime()
+  );
+}
+
+export function getFeaturedPosts(
+  posts: CollectionEntry<"blog">[],
+  size = 3
+): CollectionEntry<"blog">[] {
+  const sortedPosts = sortPostsByDateDesc(posts);
+  const featuredPosts = sortedPosts.filter((post) => post.data.featured);
+  const fallbackPosts = sortedPosts.filter((post) => !post.data.featured);
+
+  return [...featuredPosts, ...fallbackPosts].slice(0, size);
+}
+
+export function buildCategoryPath(
+  lang: SupportedLanguagesTypes,
+  category: PostsTagsType
+) {
+  return `/${lang}/posts/${category}`;
+}
+
+export function buildPostPath(slug: string) {
+  return `/dev/${slug}`;
+}
+
+export function buildLocalizedPostPath(
+  lang: SupportedLanguagesTypes,
+  blogId: string
+) {
+  return `/dev/${lang}/${blogId}`;
+}
+
+/** Expects slug in "lang/id" format (e.g. "en/my-post") and returns the id segment. */
+export function getBlogIdFromSlug(slug: string) {
+  return slug.split("/")[1] ?? "";
+}
+
+export function buildResponsiveSrcSet(images: string[] = []) {
+  const widths = [1200, 900, 600, 400];
+  return images
+    .map((image, index) => {
+      const width = widths[index] ?? widths[widths.length - 1];
+      return `${image} ${width}w`;
+    })
+    .join(", ");
+}

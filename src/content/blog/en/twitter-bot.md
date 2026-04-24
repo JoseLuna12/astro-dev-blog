@@ -10,9 +10,9 @@ thumbnails:
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_react-thumbnail.png?alt=media&token=f82cf0c0-8526-4e23-9b55-443f8092687f"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_react-thumbnail.png?alt=media&token=b1d5db2b-d285-4831-8ee2-7e09899dea5b"
 title: "Movie Web App for Twitter"
-description: "This Web App generates tweets by providing just the name of a movie and posts them."
+description: "A web app that generates ready-to-post movie tweets from a single title."
 currentLanguage: "en"
-date: "10-09-2022"
+date: "2022-09-10"
 accent: "#387CA0"
 languages:
     - "en"

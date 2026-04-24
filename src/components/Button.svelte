@@ -1,22 +1,21 @@
-<script>
+<script lang="ts">
   export let buttonText = "";
   export let position = "center";
-  export let linkPrefix = "/en";
+  export let href = "/en";
 
   let cssPosition =
-    position == "center"
+    position === "center"
       ? "justify-items-center"
-      : position == "start"
-      ? "justify-items-start"
-      : "justify-items-end";
+      : position === "start"
+        ? "justify-items-start"
+        : "justify-items-end";
 </script>
 
-<div class="grid {cssPosition} w-full">
-  <a href="{linkPrefix}/">
-    <button
-      class="my-4 px-10 bg-black text-white py-2 hover:bg-white border border-white hover:scale-105 hover:border-black hover:text-black transition"
-    >
-      {buttonText}
-    </button>
+<div class={`grid w-full ${cssPosition}`}>
+  <a
+    href={href}
+    class="my-4 inline-flex items-center justify-center border border-black bg-black px-10 py-2 text-white transition hover:scale-105 hover:bg-white hover:text-black"
+  >
+    {buttonText}
   </a>
 </div>

@@ -10,9 +10,9 @@ thumbnails:
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_astro-thumbnail.png?alt=media&token=344140fb-8774-4159-9033-0bbc0f7f314e"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_astro-thumbnail.png?alt=media&token=82f81943-a9df-4c93-a4cc-ae5e1054f703"
 title: "Cómo construí este blog con Astro"
-description: "Astro es una buena herramienta y la mejor opción para construir un blog."
+description: "Por que Astro fue la mejor opcion para construir un blog bilingue y rapido."
 currentLanguage: "es"
-date: "22-02-2022"
+date: "2023-02-22"
 accent: "#FF5D01"
 languages: 
     - "es"
@@ -22,12 +22,12 @@ categories:
     - "Web"
 ---
 # Qué es Astro?
-Astro es un constructor de sitios estaticos, especializado en mandar unicamente el javascript necesario al cliente. Astro utiliza una tecnologia llamada Astro Islands que:
->Extrae la interfaz en pequeños, aislados componentes. el Javascript que no se usa es reemplazado por HTML, garantizando cargas mas rapidas. [Astro](https://astro.build/)
+Astro es un constructor de sitios estaticos especializado en enviar solo el JavaScript necesario al cliente. Astro utiliza una tecnologia llamada Astro Islands que:
+> Extrae la interfaz en pequeños componentes aislados. El JavaScript que no se usa es reemplazado por HTML, garantizando cargas mas rapidas. [Astro](https://astro.build/)
 
 # Cómo utilicé Astro?
-Utilicé componentes de Astro para las páginas y [Svelte](https://svelte.dev/) para los componentes interactivos y reusables como botones, previsualizaciones de los blogs, etc.
-Para el multilenguaje no utilicé ningún plugin o librería, en vez, cree un metodo de ruteo. Basicamente hay dos versiones the la misma página para inglés y español, las dos comparten el mismo componente construido con Astro y como props se le envia los valores que cambian dependiendo el idioma.
+Utilicé componentes de Astro para las paginas y [Svelte](https://svelte.dev/) para los componentes interactivos y reutilizables, como botones y previsualizaciones de articulos.
+Para el multilenguaje no utilicé ningun plugin o libreria. En su lugar cree un metodo de ruteo con dos versiones de la misma pagina, una en ingles y otra en español, ambas compartiendo el mismo componente construido con Astro y recibiendo props traducidas.
 
 ```
 Blog
@@ -43,7 +43,7 @@ Blog
 	└──index.astro
 
 ```
-Los index de las carpetas `en` y `es` son muy parecidos, solo cambian en los datos que se envía al componente que comparten. Dentro de la carpeta src existe otro index, este solo se encarga de verificar el lenguaje del navegador y redireccionar a la pagina correcta.
+Los index de las carpetas `en` y `es` son muy parecidos, solo cambian los datos que se envian al componente compartido. Dentro de la carpeta `src` existe otro index que se encarga de revisar el idioma del navegador y redireccionar a la pagina correcta.
 ```javascript
 //src/index.astro
 const rawlang = window.navigator.language
@@ -54,7 +54,7 @@ if(langSplited.length > 1){
 }
 window.location = '/'+lang
 ```
-Para los posteos del blog utilicé el mismo sistema de carpetas por cada idioma. Cada post tiene su propia informacion como `fecha`, `imagen`, `lenguaje`, `lenguajes disponibles`, etc. y así la UI puede interactuar con esos valores.
+Para los posteos del blog utilicé el mismo sistema de carpetas por idioma. Cada post tiene su propia informacion como `fecha`, `imagen`, `lenguaje` y `lenguajes disponibles`, asi que la UI puede reaccionar a esos valores.
 ```
 src
 │   
@@ -68,6 +68,6 @@ src
 	 	    └──md-files.md
 ```
 # Astro o Gatsbyjs
-Soy bastante fan de [Gatsby](https://www.gatsbyjs.com/), Lo he usado en muchos projectos pero el problema que sigo teniendo hasta la versión de hoy en día cuando escribí este post (5.0) es que el bundle de javascript es innecesariamente grande incluso para páginas simplemente informativas. Astro por el otro lado previen esto enviando solo el javascript necesario para los componentes que de verdad lo necesitan al cliente, en mi caso, nada de javascript se está ejecutando en el cliente a excepción de `index.astro` en la carpeta `src`.
+Soy bastante fan de [Gatsby](https://www.gatsbyjs.com/). Lo he usado en muchos proyectos, pero el problema que seguia teniendo hasta Gatsby `5.0` era que el bundle de JavaScript enviado al cliente seguia siendo muy grande incluso para paginas informativas. Astro evita eso enviando solo el JavaScript necesario para los componentes que realmente lo necesitan. En mi caso casi no se ejecuta JavaScript en el cliente, excepto por `index.astro` dentro de `src`.
 
 Pueden ver el codigo fuente de este blog en mi repositorio de github [aquí](https://github.com/JoseLuna12/astro-dev-blog)

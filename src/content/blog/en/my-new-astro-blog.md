@@ -10,9 +10,9 @@ thumbnails:
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_astro-thumbnail.png?alt=media&token=344140fb-8774-4159-9033-0bbc0f7f314e"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_astro-thumbnail.png?alt=media&token=82f81943-a9df-4c93-a4cc-ae5e1054f703"
 title: "How I built my blog using Astro"
-description: "Astro is a great tool and the best choice for building fast and easy a blog."
+description: "Why Astro was the right choice for building a fast bilingual blog."
 currentLanguage: "en"
-date: "22-02-2023"
+date: "2023-02-22"
 accent: "#FF5D01"
 languages: 
     - "es"
@@ -22,11 +22,11 @@ categories:
     - "Web"
 ---
 # What is Astro?
-Astro is a static site builder that focus on sending just the necesarry javascript to the client. Astro introduced a new technology called Astro Islands that:
+Astro is a static site builder focused on sending only the necessary JavaScript to the client. Astro introduced a new technology called Astro Islands that:
 > Extracts your UI into smaller, isolated components on the page. Unused JavaScript is replaced with lightweight HTML, guaranteeing faster loads and time-to-interactive. [Astro](https://astro.build/)
 # How did I use Astro?
-I used Astro components for the main pages and [Svelte](https://svelte.dev/) for reusable and interactive components like buttons, small blogs previsualizations, etc. 
-For the internationalization I did not use any plugin or library, is a custom made routing system. Basically there are two of the same pages, one for english and one for spanish, both of them share the same page component built with astro and as props I send the translation values.
+I used Astro components for the main pages and [Svelte](https://svelte.dev/) for reusable and interactive components like buttons and small post previews.
+For internationalization I did not use a plugin or library. Instead, I built a custom routing system with two versions of the same pages, one for English and one for Spanish, both sharing the same Astro component with translated props.
 
 ```
 Blog
@@ -42,7 +42,7 @@ Blog
 	└──index.astro
 
 ```
-The main index pages are the ones inside the language folders (*en*, *es*) and the index inside the *src* folder just redirects the user to it's browsers preferred language.
+The main index pages are the ones inside the language folders (*en*, *es*), and the index inside the *src* folder redirects the user to their browser's preferred language.
 ```javascript
 //index.astro
 const rawlang = window.navigator.language
@@ -53,7 +53,7 @@ if(langSplited.length > 1){
 }
 window.location = '/'+lang
 ```
-For the blogs posts I used the same system with folders to separate posts for each language. Each post has its own data like `date`, `image`, `current language`, `available languages`, etc. So the UI can react to that.
+For the blog posts I used the same folder-based system for each language. Each post has its own data like `date`, `image`, `current language`, and `available languages`, so the UI can react to that.
 ```
 src
 │   
@@ -67,6 +67,6 @@ src
 	 	    └──md-files.md
 ```
 # Astro or Gatsbyjs
-I'm a big fan of [Gatsby](https://www.gatsbyjs.com/), I've used it in many projects but the main problem I keep having until this version of gatsby (`5.0`) is that the javascript bundle send to the client is way to big, even for informative pages, Astro on the other hand, prevent this by sending only the necessary javascript to the client, in my case, none javascript is being send to the client, except for the main `index.astro` file in the `src` folder.
+I'm a big fan of [Gatsby](https://www.gatsbyjs.com/), and I've used it in many projects. The main issue I kept running into through Gatsby `5.0` was that the JavaScript bundle sent to the client was still too large, even for informational pages. Astro prevents that by only shipping the JavaScript that is truly needed. In my case, there is almost no client-side JavaScript except for the main `index.astro` file in the `src` folder.
 
 You can check the source code of this blog on my github repo [here](https://github.com/JoseLuna12/astro-dev-blog)

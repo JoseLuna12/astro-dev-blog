@@ -10,9 +10,9 @@ thumbnails:
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_event-app-flutter-thumb.png?alt=media&token=244b55ea-08df-480a-9e98-f7b6ec95d1d9"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_event-app-flutter-thumb.png?alt=media&token=15383cff-4372-451b-a25a-3e4377032a82"
 title: "Events App UI with Flutter"
-description: "A simple interface for an events app built with Flutter."
+description: "A lightweight event app interface built with Flutter."
 currentLanguage: "en"
-date: "22-02-2023"
+date: "2023-02-22"
 accent: "#46D1FD"
 languages: 
     - "es"

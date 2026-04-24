@@ -10,9 +10,9 @@ thumbnails:
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_swift-event-app-thumbnail.png?alt=media&token=76b87c6f-26db-4d26-a0ee-f30bc076c594"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_swift-event-app-thumbnail.png?alt=media&token=a0c6e0f6-47cb-48ce-9f64-7649abf23066"
 title: "Events App UI with Swift"
-description: "A simple interface for an events app built using Swift UI."
+description: "A lightweight event app interface built with SwiftUI."
 currentLanguage: "en"
-date: "22-02-2023"
+date: "2023-02-22"
 accent: "#F05138"
 languages: 
     - "es"

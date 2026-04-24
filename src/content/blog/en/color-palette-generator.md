@@ -10,10 +10,10 @@ thumbnails:
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_half_color-palette-rust-thumb.png?alt=media&token=693a376a-7dfb-4f31-9640-72a3d3004f12"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_med_color-palette-rust-thumb.png?alt=media&token=0557f762-6203-4437-bb8f-3a6e52243000"
    - "https://firebasestorage.googleapis.com/v0/b/dashboard-blogs-app.appspot.com/o/images%2FThzROsREBLP9kFuUvCnohZ2IABw2%2Fthumbnail_low_color-palette-rust-thumb.png?alt=media&token=50261796-e930-4b12-bd4a-9d3b68e49ed7"
-title: "A Wasm library built in rust"
-description: "This rust script recieves an image as input and return the same image with its color palette"
+title: "A WASM color palette library built in Rust"
+description: "A Rust and WASM library that extracts an image palette and returns a color preview."
 currentLanguage: "en"
-date: "03-03-2023"
+date: "2023-03-03"
 accent: "#000000"
 languages: 
     - "en"
@@ -107,5 +107,4 @@ You can check out the library script [here](https://github.com/JoseLuna12/image-
 
 </p>
 </div>
-
 

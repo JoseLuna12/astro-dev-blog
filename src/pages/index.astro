@@ -1,11 +1,35 @@
-<script is:inline>
-  const rawlang = window.navigator.language
-  let lang = 'en'
-  let langSplited = rawlang.split('-')
-  if(langSplited.length > 1){
-    lang = langSplited[0]
-  }
+---
+import {
+  defaultLanguage,
+  supportedLanguages,
+} from "../utils/languageUtils";
+import { siteConfig, toAbsoluteUrl } from "../utils/site";
 
-  window.location = '/'+lang
+const defaultPath = `/${defaultLanguage}`;
+const supportedKeys = supportedLanguages.map((language) => language.key);
+---
 
-</script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0;url=${defaultPath}`} />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Redirecting to the localized home page for Jose Luna's devlog."
+    />
+    <link rel="canonical" href={toAbsoluteUrl(defaultPath, siteConfig.siteUrl)} />
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>
+      Redirecting to <a href={defaultPath}>the home page</a>.
+    </p>
+    <script is:inline define:vars={{ defaultPath, supportedKeys }}>
+      const browserLanguage = window.navigator.language.toLowerCase();
+      const [language] = browserLanguage.split("-");
+      const target = supportedKeys.includes(language) ? `/${language}` : defaultPath;
+      window.location.replace(target);
+    </script>
+  </body>
+</html>

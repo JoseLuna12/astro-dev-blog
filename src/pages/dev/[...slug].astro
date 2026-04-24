@@ -1,6 +1,9 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import Blogpost from "../../layout/blogpost.astro";
+import type { SupportedLanguagesTypes } from "../../utils/languageUtils";
+import { getBlogIdFromSlug } from "../../utils/postUtils";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -15,13 +18,7 @@ type Props = CollectionEntry<"blog">;
 const post = Astro.props as Props;
 const { slug, data } = post;
 const { Content } = await post.render();
-
-function getDataFromSlug() {
-  const rawSlug = slug.split("/");
-  return [rawSlug[0] || "en", rawSlug[1]];
-}
-
-const [_, blogId] = getDataFromSlug();
+const blogId = getBlogIdFromSlug(slug);
 
 const {
   categories,
@@ -34,6 +31,7 @@ const {
   thumbnails,
 } = data;
 const icon = categories[0] || "";
+const lang = currentLanguage as SupportedLanguagesTypes;
 ---
 
 <Blogpost
@@ -42,7 +40,7 @@ const icon = categories[0] || "";
   languages={languages}
   categories={categories}
   blogId={blogId}
-  lang={currentLanguage}
+  lang={lang}
   subtitle={description}
   title={title}
   images={images ?? []}

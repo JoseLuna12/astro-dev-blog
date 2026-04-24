@@ -1,7 +1,11 @@
 ---
 import PostsComponent from "../../../components/PostsComponent.astro";
 import type { SupportedLanguagesTypes } from "../../../utils/languageUtils";
-import { AllowedPostTags, type PostsTagsType } from "../../../utils/postUtils";
+import {
+  AllowedPostTags,
+  isPostTag,
+  type PostsTagsType,
+} from "../../../utils/postUtils";
 const lang: SupportedLanguagesTypes = "es";
 
 export async function getStaticPaths() {
@@ -12,8 +16,8 @@ export async function getStaticPaths() {
   });
 }
 
-const filter: PostsTagsType =
-  (Astro.params.categories as PostsTagsType) ?? "All";
+const routeCategory = Astro.params.categories ?? "All";
+const filter: PostsTagsType = isPostTag(routeCategory) ? routeCategory : "All";
 ---
 
 <PostsComponent currentCategory={filter} lang={lang} />
