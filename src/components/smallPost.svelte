@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { getResponsiveImage } from "../utils/postUtils";
+
   export let title = "";
   export let subtitle = "";
   export let categories: string[] = [];
@@ -6,13 +8,7 @@
   export let lang = "en";
   export let thumbnails: string[] = [];
 
-  const widths = [1200, 900, 600, 400];
-  const thumbnailsSrcSet = thumbnails
-    .map((thumbnail, index) => {
-      const width = widths[index] ?? widths[widths.length - 1];
-      return `${thumbnail} ${width}w`;
-    })
-    .join(", ");
+  const { src: thumbnailSrc, srcset: thumbnailsSrcSet } = getResponsiveImage(thumbnails);
 </script>
 
 <div class="h-auto w-full">
@@ -20,7 +16,7 @@
     <img
       srcset={thumbnailsSrcSet || undefined}
       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-      src={thumbnails[0] ?? ""}
+      src={thumbnailSrc}
       alt={title}
     />
     <p>

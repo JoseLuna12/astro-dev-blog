@@ -6,7 +6,7 @@ import {
   AllowedPostTags,
   buildCategoryPath,
   buildPostPath,
-  buildResponsiveSrcSet,
+  getResponsiveImage,
   getPostsByLang,
   isPostTag,
   sortPostsByDateDesc,
@@ -90,7 +90,10 @@ const pageDescriptions = {
       ) : (
         posts.map((post) => {
           const thumbnails = post.data.thumbnails ?? [];
-          const thumbnailsSrcSet = buildResponsiveSrcSet(thumbnails);
+          const { src: thumbnailSrc, srcset: thumbnailsSrcSet } = getResponsiveImage(
+            thumbnails
+          );
+          const fallbackSrc = post.data.images?.[0] ?? "";
 
           return (
             <article class="flex w-full flex-col sm:flex-row md:flex-row lg:flex-row">
@@ -99,7 +102,7 @@ const pageDescriptions = {
                   srcset={thumbnailsSrcSet || undefined}
                   sizes="(min-width: 768px) 50vw, 100vw"
                   class="h-full w-full rounded-xl object-cover"
-                  src={thumbnails[0] ?? post.data.images?.[0]}
+                  src={thumbnailSrc || fallbackSrc}
                   alt={post.data.title}
                 />
               </a>
